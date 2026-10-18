@@ -40,7 +40,9 @@ In a Codex session with the built-in image-generation tool, we explicitly loaded
 
 In Cursor local IDE Agent, a fresh studio chat received only a canal photograph, with no text. It loaded the workflow, generated four real images, retried two, and saved four JPEGs. The output was 1152×864 (4:3), rather than the source's approximately 3:2; some tear placement and color details also drifted. This verifies the photo-only execution path, not full visual fidelity or compatibility across accounts.
 
-Fresh-session automatic discovery in Codex and end-to-end runs in TRAE, Doubao or WorkBuddy remain unverified. Output varies by host and model. Native files are preserved; an enlarged export is not described as native 4K.
+In TraeWork CN, we imported the published root-level ZIP, enabled torn-paper, and sent only the canal photograph in a new default local task. It automatically invoked the skill and delivered four separate JPEGs, each saved at 2400×1600. Files decoded successfully and opened in the side-panel preview. Some tears, reflections and colors still drifted; platform AI labels remained. Four simultaneous inline previews and the generation tool's native versus saved dimensions were not independently verified.
+
+WorkBuddy v5.8.3 has imported and enabled the portable skill. Its photo-only generation test is pending, with no verified image output yet. Installation is not recorded as a generation pass or a security certification. Doubao's dedicated entry and fresh-session automatic discovery in Codex remain unverified. Output varies by host and model; an enlarged export is not described as native 4K.
 
 ## Privacy and security
 

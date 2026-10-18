@@ -36,7 +36,7 @@
 
 TRAE / TraeWork 也提供根目录单文件[技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-trae.zip)。WorkBuddy 使用[便携技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)和专用专家配置。豆包需配置专用会话或智能体；目前不能承诺在普通聊天中粘贴 GitHub 地址就能安装。
 
-**Cursor 本地 Agent 已完成“新会话只发照片 → 自动生图并检查 → 保存四张图片”的实测。** 本次结果的比例和部分撕口仍有偏差；其他平台尚待客户端验收，不能据此保证全部兼容。详情见 [TESTING.md](TESTING.md)，具体点击路径见 [INSTALL.md](INSTALL.md)。需要备用手动提示词时，再看 [TRY_IT.md](TRY_IT.md)。
+**Cursor 本地 Agent 和 TraeWork CN 均已完成“新会话只发照片 → 自动调用技能 → 生成并保存四张图片”的实测。** TRAE 可直接导入技能包后新建默认任务，不必打开专用工作室；本次四张保存尺寸为 2400×1600。两端仍有撕口、色调或比例限制。WorkBuddy 已确认安装启用，出图待测；豆包入口仍待验收。详情见 [TESTING.md](TESTING.md)，具体点击路径见 [INSTALL.md](INSTALL.md)。需要备用手动提示词时，再看 [TRY_IT.md](TRY_IT.md)。
 
 <details>
 <summary>手动复制技能文件夹（已有项目）</summary>

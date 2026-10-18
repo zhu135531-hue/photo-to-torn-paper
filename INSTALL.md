@@ -20,19 +20,19 @@
 
 1. 下载 [torn-paper-trae.zip](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-trae.zip)。
 2. 在技能管理中上传 ZIP 并启用。TraeWork 的入口为“插件市场 → 技能 → 上传技能”。
-3. 打开撕纸技能会话，上传照片并发送。只有照片时，技能会按默认规则开始。
+3. 新建任务，只上传照片并发送。不用打字或手动选择撕口。
 
 包内 **SKILL.md 位于 ZIP 根目录**，视觉规范已合并到单文件，避免导入只保留指令而丢失参考文档。也可以用 TRAE 打开上面的 **photo-studio** 文件夹，里面同时包含 `.trae/skills` 和 `.trae/rules`，让新会话也加载照片触发规则。
 
-需确认所选 Agent 实际开放参考图生图工具。不能仅因安装了技能或选择了某个模型就认定能生图。本项目尚未完成 TRAE 客户端验收。
+TraeWork CN 已按上述路径实测：默认本地新任务只发照片，自动调用 torn-paper，生成并保存四张 2400×1600 JPEG；点击文件卡片可预览。部分撕边、色调仍有偏差，四张同时内嵌预览未验证，详见 [TESTING.md](TESTING.md)。这是当前账号与环境的结果；其他 TRAE 版本和账号仍需确认实际开放参考图生图工具。
 
-## WorkBuddy：启用技能，绑定专用专家
+## WorkBuddy：先启用技能，再验证照片入口
 
-下载 [torn-paper-portable.zip](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)，按客户端本地技能导入入口安装并启用。便携包包含自足的技能正文和 WorkBuddy 展示字段，不依赖脚本、密钥或额外参考文件。
+下载 [torn-paper-portable.zip](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)，在“专家·技能·连接器 → 技能 → 添加技能 → 上传技能”导入，按客户端安全检测结果处理，再在“已安装技能”中确认 torn-paper 已启用。便携包包含自足的技能正文和 WorkBuddy 展示字段，不依赖脚本、密钥或额外参考文件。
 
 专用专家的配置内容已备好：[workbuddy-expert.txt](integrations/workbuddy-expert.txt)。创建一次“佳成的挑战日记·撕纸”专家并绑定已安装的 torn-paper，之后进入该专家会话只发照片。作者完成客户端实测和分享后，用户才可以进一步简化为“点分享链接 → 发照片”。目前没有可验证的专家分享链接，也没有上架市场，不能通过搜索名称保证安装到本项目。
 
-官方的“对话查找安装”面向市场技能，不能把任意 GitHub URL 当作已支持的安装指令。未在本机安装 WorkBuddy，因此照片自动匹配、生图和专家绑定仍待实测。
+官方的“对话查找安装”面向市场技能，不能把任意 GitHub URL 当作已支持的安装指令。本机 WorkBuddy v5.8.3 已确认安装并启用 torn-paper；照片自动匹配、真实出图和专家绑定仍待实测，当前不能承诺只发照片就一定出图。
 
 ## 豆包：专用会话 / 智能体入口
 
