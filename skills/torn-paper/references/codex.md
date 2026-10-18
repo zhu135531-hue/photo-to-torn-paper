@@ -22,10 +22,16 @@ The built-in tool may save under a host-managed generated-images directory. Use 
 For repeatable checks and non-destructive copying, run the bundled helper:
 
 ```text
-python scripts/collect_outputs.py /absolute/path/to/manifest.json --output-dir /absolute/path/to/output/new-run
+python /absolute/path/to/torn-paper/scripts/collect_outputs.py /absolute/path/to/manifest.json --source-root /selected/photo/folder --generated-root /actual/tool/output/folder --workspace-root /authorized/project --output-dir /authorized/project/output/new-run
 ```
 
-The script uses Pillow for decoding and EXIF-aware dimension checks; it never generates, edits or resizes images. Each manifest entry needs `id`, `scene`, `event`, `source_path`, `generated_path`, `prompt`, and a human visual `review` containing `status` (`accepted` or `rejected`) and `notes`. Optional fields may record previous attempts.
+The script uses Pillow for decoding and EXIF-aware dimension checks; it never generates, edits or resizes images. It requires Python 3.11+ and a patched Pillow version specified in `scripts/requirements.txt`. Install dependencies only when authorized, preferably in a virtual environment; ordinary built-in generation does not require this helper or its dependencies.
+
+All paths in the command must be absolute local paths. Source and generated roots must come from the user's selected inputs and actual tool outputs, not from the manifest. You may repeat either root flag for multiple explicitly selected directories. Output must be a new directory inside the authorized workspace; links, junctions, network shares and protected configuration directories are rejected.
+
+Limits: 32 images per collection, 32 MiB per file, 256 MiB total encoded input, 40 million pixels per decoded image, 2 MiB per manifest. Only single-frame PNG, JPEG and WebP decoders are enabled. Generated GPS metadata is rejected. These checks reduce exposure; the helper is not an OS sandbox or a complete metadata/privacy scanner.
+
+Each manifest entry needs `id`, `scene`, `event`, `source_path`, `generated_path`, `prompt`, and a visual `review` containing `status` (`accepted` or `rejected`) and `notes`. Optional fields may record previous attempts. The script trusts the review status supplied by the caller; it cannot verify aesthetics automatically.
 
 ```json
 {
@@ -44,7 +50,7 @@ The script uses Pillow for decoding and EXIF-aware dimension checks; it never ge
 }
 ```
 
-The saved `run.json` contains the prompts, original and generated dimensions, hashes, copied paths and review notes. It deliberately omits local source paths. It is a local test record, not a claim of compatibility with other hosts, automatic skill discovery, or pixel-identical reproduction.
+By default, `run.json` contains dimensions, output-file hashes, filenames and review status. It omits prompts, review text, local source paths, source-photo fingerprints and unknown metadata fields. Add `--include-prompts` only when explicitly keeping a private debugging record; this includes prompts and review text that may contain personal details. Review those records before any publication. This is not a claim of compatibility with other hosts, automatic skill discovery, or pixel-identical reproduction.
 
 ## Invoking the repository copy
 

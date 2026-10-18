@@ -5,3 +5,9 @@ Thumbs.db
 .DS_Store
 output/
 dist/
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key

@@ -1,0 +1,27 @@
+name: 使用问题 / Bug report
+description: 记录可复现的问题，帮助大家用好技能
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: "佳成的挑战日记感谢你的反馈。不要上传密钥、私人照片或完整调试日志；安全漏洞请按 SECURITY.md 私密报告。"
+  - type: input
+    id: host
+    attributes:
+      label: 使用的平台与模型 / Host and model
+      placeholder: "例如 Codex；模型无法确认时写未知"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 操作步骤与期待结果 / Steps and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果 / Actual result
+      description: "可选附图。上传前请确认权利、人物同意和隐私；不要包含精确定位或私人资料。"
+    validations:
+      required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 安全问题私密报告 / Private vulnerability report
+    url: https://github.com/zhu135531-hue/photo-to-torn-paper/security/advisories/new
+    about: 不要在普通 Issue 公开密钥、隐私或漏洞利用细节

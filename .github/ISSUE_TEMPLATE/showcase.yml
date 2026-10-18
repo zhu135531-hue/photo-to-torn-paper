@@ -1,0 +1,24 @@
+name: 复现分享 / Reproduction report
+description: 分享成功或失败经验，帮助别人少走弯路
+title: "[复现] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: 平台、模型与日期 / Host, model and date
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: 你做了哪些调整，哪些地方成功或失败？
+      description: "图片为可选，请先移除隐私信息。不要为反馈公开不愿分享的原照片。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: 分享确认
+      options:
+        - label: "如果我附了图片，我有权分享并理解这里是公开页面。"
+          required: true
