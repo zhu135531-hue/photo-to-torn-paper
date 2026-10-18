@@ -2,6 +2,8 @@
 
 Send the photograph as a semantic reference. Write one prompt per poster. Fill the blanks from the photograph. Delete any sentence that does not apply.
 
+The instruction to omit watermarks concerns generated artwork decoration. Host-required or host-applied AI/provenance labels remain; do not ask the host to disable them or reject an otherwise acceptable result for that label.
+
 ```text
 Semantic reference only. Rebuild the scene as layered cut paper. No photographic pixels, no pasted photo texture, no second scene.
 

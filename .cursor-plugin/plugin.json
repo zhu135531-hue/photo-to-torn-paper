@@ -1,6 +1,6 @@
 {
   "name": "jiacheng-torn-paper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "佳成的挑战日记：启用后只发照片，自动生成四种独立撕纸画。Requires native reference-image generation.",
   "author": {"name": "佳成的挑战日记"},
   "homepage": "https://github.com/zhu135531-hue/photo-to-torn-paper",

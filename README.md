@@ -34,9 +34,9 @@
 2. 新建本地 Agent 对话，上传照片并发送。项目内已经包含照片触发规则，不需要复制提示词。
 3. 默认得到四张独立撕纸画；想改变数量时才补充“只做一张”。
 
-TRAE / TraeWork 也提供根目录单文件[技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-trae.zip)。WorkBuddy 使用[便携技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)和专用专家配置。豆包需配置专用会话或智能体；目前不能承诺在普通聊天中粘贴 GitHub 地址就能安装。
+TRAE / TraeWork 也提供根目录单文件[技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-trae.zip)。WorkBuddy 导入并启用[便携技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)后，可在默认办公任务只发照片；专用专家是可选入口，尚未实测。豆包需配置专用会话或智能体；目前不能承诺在普通聊天中粘贴 GitHub 地址就能安装。
 
-**Cursor 本地 Agent 和 TraeWork CN 均已完成“新会话只发照片 → 自动调用技能 → 生成并保存四张图片”的实测。** TRAE 可直接导入技能包后新建默认任务，不必打开专用工作室；本次四张保存尺寸为 2400×1600。两端仍有撕口、色调或比例限制。WorkBuddy 已确认安装启用，出图待测；豆包入口仍待验收。详情见 [TESTING.md](TESTING.md)，具体点击路径见 [INSTALL.md](INSTALL.md)。需要备用手动提示词时，再看 [TRY_IT.md](TRY_IT.md)。
+**Cursor 本地 Agent、TraeWork CN、WorkBuddy 均已完成“新会话只发照片 → 自动调用技能 → 生成并保存四张图片”的实测。** TRAE 和 WorkBuddy 可导入技能包后新建默认任务；本次分别保存四张 2400×1600 JPEG 和四张 1024×1024 PNG。WorkBuddy 当前测试通道忽略横图尺寸请求，不能承诺保留原图比例；各端仍有局部撕口、色调或纸感偏差。豆包入口仍待验收。详情见 [TESTING.md](TESTING.md)，具体点击路径见 [INSTALL.md](INSTALL.md)。需要备用手动提示词时，再看 [TRY_IT.md](TRY_IT.md)。
 
 <details>
 <summary>手动复制技能文件夹（已有项目）</summary>
@@ -134,7 +134,7 @@ TRAE / TraeWork 也提供根目录单文件[技能包](https://github.com/zhu135
 
 如果它帮你做出了喜欢的作品，欢迎自愿 Star、分享项目链接，或提交复现经验。我们更希望大家能实际用好它；不同平台的成功与失败都值得记录。
 
-分享时可自愿使用署名：**“方法来自：佳成的挑战日记 · Photo to Torn Paper”**。这不是新增的使用限制；技能继续按 MIT 开放，普通成品默认不加水印。下载包内的作者说明也保留出处。
+分享时可自愿使用署名：**“方法来自：佳成的挑战日记 · Photo to Torn Paper”**。这不是新增的使用限制；技能继续按 MIT 开放，默认不额外添加宣传水印，保留平台 AI/来源标识。下载包内的作者说明也保留出处。
 
 ## 许可
 

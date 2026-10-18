@@ -6,7 +6,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '0.2.0'
+VERSION = '0.2.1'
 SKILL = ROOT / 'skills/torn-paper'
 REPO = 'https://github.com/zhu135531-hue/photo-to-torn-paper'
 
@@ -74,7 +74,7 @@ def build(destination):
     # WorkBuddy market metadata is added only to its portable distribution, keeping the
     # canonical Agent Skills frontmatter compatible with stricter hosts.
     portable = portable.replace('metadata:\n',
-        'version: "0.2.0"\nauthor: "佳成的挑战日记"\ndescription_zh: "只发照片，自动做成四种独立撕纸画"\ndescription_en: "Convert photo-only uploads into four separate torn-paper artworks."\nmetadata:\n', 1)
+        'version: "'+VERSION+'"\nauthor: "佳成的挑战日记"\ndescription_zh: "只发照片，自动做成四种独立撕纸画"\ndescription_en: "Convert photo-only uploads into four separate torn-paper artworks."\nmetadata:\n', 1)
     write_zip(destination/'torn-paper-portable.zip', {
         'torn-paper/SKILL.md': portable.encode(), 'torn-paper/LICENSE': files['LICENSE'],
         'torn-paper/SOURCE.txt': source})
@@ -87,7 +87,7 @@ def build(destination):
         '选择本地 Agent，新建对话，只上传照片并发送。默认生成四张独立撕纸画。'
         '无需输入提示词。所用环境必须提供参考图生图工具。\n\n'
         '规则仅作用于此工作室；离开该项目恢复普通使用。照片和成品不要提交到公开仓库。\n\n'
-        'TRAE 和 WorkBuddy 尚需客户端实测；不是所有环境都具备生图能力。\n' + REPO + '\n').encode(),
+        '客户端验证状态见仓库 TESTING.md；不是所有环境都具备生图能力。\n' + REPO + '\n').encode(),
         'photo-studio/.gitignore': b'output/\ninput/\n*.jpg\n*.jpeg\n*.png\n*.webp\n.env*\n',
         'photo-studio/.cursor/rules/photo-only.mdc': rule.replace('skills/torn-paper/SKILL.md', '.cursor/skills/torn-paper/SKILL.md').encode(),
         'photo-studio/.trae/rules/photo-only.md': rule.replace('skills/torn-paper/SKILL.md', '.trae/skills/torn-paper/SKILL.md').encode()}

@@ -20,6 +20,12 @@ If the host requires an official image skill to expose the tool, use it only whe
 
 Load the enabled torn-paper skill when the user submits a photo without text. Use the image-to-image tool actually assigned by WorkBuddy. Tool permissions are supplied by the host, not invented in SKILL.md. Use the current photo as reference, then display all four separate outputs.
 
+Generate serially, one variant at a time. In the Windows v5.8.3 test, concurrent ImageGen calls with the same prompt prefix returned duplicate paths and overwrote two of four images. Use a separate destination directory for each event/attempt if the actual tool schema provides one, for example `output/<run>/01-waterline/attempt-1/`. Start each prompt with a short distinct event identifier as an additional filename safeguard. If no destination field exists, preserve the returned image to a unique event filename before starting the next call. Verify four distinct saved files and their event mapping before the final reply; never count previews or successful calls alone.
+
+WorkBuddy may add an “AI生成” label. Keep this host provenance label. Do not set empty/whitespace watermark parameters, crop, erase, or regenerate merely to remove it. Do not confuse it with an invented caption or promotional logo.
+
+In the Windows v5.8.3 test, the current ImageGen route returned 1024×1024 images for a 1080×719 photo. A separate one-image probe explicitly requested `size: "1536x1024"` but still returned 1024×1024. This is a limitation observed in that account and route, not a guarantee about every version. Read the current schema, use its real supported size field when available, and verify the saved dimensions. If the result remains square, deliver it with a clear ratio limitation; do not promise original-ratio preservation, stretch/crop it, or switch services automatically.
+
 A dedicated expert can bind this workflow persistently; its setup instructions should load this skill before accepting photo-only input. Skill ZIP installation and expert-market publication are different operations. Do not claim market availability or a share link until the host creates it. If photo-only matching is not reliable, bind it to an expert rather than asking for a full prompt every time.
 
 ## Doubao

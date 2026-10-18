@@ -42,7 +42,7 @@ In Cursor local IDE Agent, a fresh studio chat received only a canal photograph,
 
 In TraeWork CN, we imported the published root-level ZIP, enabled torn-paper, and sent only the canal photograph in a new default local task. It automatically invoked the skill and delivered four separate JPEGs, each saved at 2400×1600. Files decoded successfully and opened in the side-panel preview. Some tears, reflections and colors still drifted; platform AI labels remained. Four simultaneous inline previews and the generation tool's native versus saved dimensions were not independently verified.
 
-WorkBuddy v5.8.3 has imported and enabled the portable skill. Its photo-only generation test is pending, with no verified image output yet. Installation is not recorded as a generation pass or a security certification. Doubao's dedicated entry and fresh-session automatic discovery in Codex remain unverified. Output varies by host and model; an enlarged export is not described as native 4K.
+WorkBuddy v5.8.3 also passed a fresh default-task, photo-only run: automatic skill selection, real generation and four distinct PNG files with previews. All four were 1024×1024 for a 1080×719 source; a separate explicit `size: "1536x1024"` probe still returned a square image. Original-ratio preservation and strict visual acceptance did not pass. The update prevents observed concurrent filename collisions and preserves host AI labels. Installation and a scanner's safe result are not a comprehensive security certification. Doubao's dedicated entry and fresh-session automatic discovery in Codex remain unverified. Output varies by host and model; an enlarged export is not described as native 4K.
 
 ## Privacy and security
 
