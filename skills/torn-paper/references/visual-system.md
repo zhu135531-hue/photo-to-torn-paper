@@ -6,7 +6,7 @@ This is the look to rebuild. It was taken from finished posters that kept a plac
 
 Every region is cut paper. Sky, water, stone, foliage, clothing, and skin are paper sheets with grain. Edges show a little thickness. Light is flat, as in a scan of a paper illustration. A soft shadow may appear only under an overlap.
 
-Cream is the torn fiber. It is a narrow warm edge. It is not the color of the sky, the wall, or the ground.
+Added cream is the torn fiber: a narrow warm edge, not a wash over the scene. Objects that are already pale or cream in the photograph, such as plaster, petals, clothing or sky, keep those source colors.
 
 ## Color
 
@@ -39,7 +39,7 @@ The tear separates sheets. It should be readable at thumbnail size without becom
 
 ## Depth
 
-Three to five sheets are enough. More sheets turn the picture into scraps. Fewer than three sheets leave no tear to read.
+Use three to five major depth groups. Small petals, tiles, bricks and paper facets may exist within those groups; they do not require separate major depth planes. Keep quiet areas from becoming confetti or a mass of equally prominent rips.
 
 Order the sheets the way the photograph is ordered: far sheet, middle sheet, near sheet. A form may pass behind a tear. It may not be sliced into unrelated pieces unless that slice is the chosen event.
 
