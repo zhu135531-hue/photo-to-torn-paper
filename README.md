@@ -1,8 +1,10 @@
-# 撕纸 · 佳成的挑战日记
+# 照片转撕纸画 AI Skill · Photo to Torn Paper
 
 **一张照片，四种撕纸。把喜欢的创作方法，分享给每一个想试试的人。**
 
-[English](README.en.md) · [安装一次，只发照片](INSTALL.md) · [下载技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper.zip) · [安全说明](SECURITY.md) · [参与共创](CONTRIBUTING.md)
+**Photo to Torn Paper（照片转撕纸画）**是由 **佳成的挑战日记（Jiacheng's Challenge Diary）**维护的开源 Agent Skill，技能名为 `torn-paper`。它让支持参考图生图的智能体，把实拍照片重绘成纸纹、纤维撕口和叠层阴影组成的插画，默认交付四张独立图片。
+
+[English](README.en.md) · [安装与使用](INSTALL.md) · [常见问题](docs/FAQ.md) · [最新版本](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest) · [安全说明](SECURITY.md) · [参与共创](CONTRIBUTING.md)
 
 ![佳成的挑战日记：把照片变成撕纸画](assets/cover.png)
 
@@ -11,6 +13,24 @@
 保留熟悉的建筑、人物和构图，让天空、树木、水面与主体变成一层层纸。默认做四种撕口，也可以只做一张。
 
 由 **[佳成的挑战日记](https://github.com/zhu135531-hue)** 创作与维护。我们记录真实尝试、公开方法，也记录没有做好的部分。
+
+## 复制给智能体，让它帮你安装
+
+把下面这段话发给你使用的智能体。安装并启用后，日常只需发照片，不用反复写提示词。
+
+```text
+请帮我安装并启用「佳成的挑战日记」的照片转撕纸技能：
+https://github.com/zhu135531-hue/photo-to-torn-paper
+
+请自行读取安装说明，选择适合当前平台的安装方式，并检查是否具备参考图生图能力。
+
+安装完成后，我只发照片，你就默认生成四张独立撕纸画，不再让我复制提示词。
+需要我确认安装或授权时，只告诉我必须操作的那一步；无法完成时如实说明。
+```
+
+**先看真实状态：** Cursor 本地 Agent、TraeWork CN 和 WorkBuddy 均已完成安装后的照片无文字出图实测；“只给仓库链接，由智能体从零代安装”尚未完成全流程实测。豆包普通聊天也没有验证过此安装入口。平台要求的安装确认仍需你完成；没有生图工具时，安装技能不会凭空增加该能力。详见 [安装说明](INSTALL.md)与[实测记录](TESTING.md)。
+
+技能及指令 MIT 开源；生图是否收费、额度和照片留存由所用平台决定。默认不索取密码或 API Key，不申请管理员权限，不关闭安全检测。遇到这些要求请停止并核对[安全边界](SECURITY.md)。
 
 ## 从这里开始
 
@@ -27,6 +47,7 @@
 - [视觉规则与常见失败](skills/torn-paper/references/visual-system.md)
 - [Codex 运行说明](skills/torn-paper/references/codex.md)
 - [2026-10-18 实测记录与已修问题](TESTING.md)
+- [照片转撕纸画常见问题：平台、价格、隐私与分辨率](docs/FAQ.md)
 
 ## 只发照片的入口
 

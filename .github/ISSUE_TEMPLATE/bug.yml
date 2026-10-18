@@ -12,6 +12,17 @@ body:
       placeholder: "例如 Codex；模型无法确认时写未知"
     validations:
       required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 卡在哪一步？ / Where did it fail?
+      options:
+        - 不确定 / Not sure
+        - 给了仓库链接，智能体未完成安装 / Agent-assisted installation
+        - 手动导入技能失败 / Manual import
+        - 已安装，但只发照片未触发 / Photo-only trigger
+        - 已触发，但没有实际图片 / Image generation
+        - 图片数量、尺寸或效果问题 / Output quality or files
   - type: textarea
     id: steps
     attributes:

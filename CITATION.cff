@@ -1,8 +1,13 @@
 cff-version: 1.2.0
 message: "If this workflow helps your work, optional attribution to 佳成的挑战日记 is welcome."
-title: "Photo to Torn Paper — 佳成的挑战日记"
+title: "Photo to Torn Paper — 照片转撕纸画 AI Skill — 佳成的挑战日记"
 type: software
 authors:
   - name: "佳成的挑战日记"
 repository-code: "https://github.com/zhu135531-hue/photo-to-torn-paper"
+keywords:
+  - agent-skill
+  - photo-to-art
+  - torn-paper
+  - 照片转撕纸画
 license: MIT
