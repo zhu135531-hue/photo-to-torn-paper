@@ -22,6 +22,6 @@ jobs:
         run: python3 -m venv .venv
       - name: Install the tested image dependency
         run: .venv/bin/python -m pip install -r skills/torn-paper/scripts/requirements.txt
-      - name: Run synthetic security regressions
+      - name: Run security and distribution regressions
         run: .venv/bin/python -m unittest discover -s tests -v
 

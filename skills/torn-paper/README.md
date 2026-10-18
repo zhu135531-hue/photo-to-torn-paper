@@ -10,6 +10,10 @@ This folder is a standalone skill. It does not include, modify, or relicense any
 
 ## 安装
 
+希望只发照片：优先使用项目首页的 **photo-studio.zip**，用 Cursor 或 TRAE 打开其中的 photo-studio 文件夹。包内已带项目规则，负责在照片没有附文字时加载本技能；不需要每次输入技能名。完整平台入口与尚未验证的部分见仓库根目录的 **INSTALL.md**。
+
+TRAE / TraeWork 的上传界面使用 **torn-paper-trae.zip**（根级 SKILL.md，包含全部视觉指令）；WorkBuddy 使用 **torn-paper-portable.zip**。单独复制下面的技能文件夹时，自动选用仍由宿主决定，不能视为零文字入口已验证。
+
 Cursor，当前项目：
 
 ```bash
@@ -41,6 +45,8 @@ Codex 当前官方的项目级目录是 `.agents/skills/torn-paper`，用户级�
 装好后新开一轮对话，让技能描述被读到。
 
 ## 怎么用
+
+在专用工作室或已激活的撕纸会话中，**只上传照片并发送**，默认每张照片输出四张独立撕纸画。以下文字只在要改数量或有特别要求时使用。
 
 上传一张照片，说：
 

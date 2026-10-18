@@ -14,6 +14,12 @@ This repository shares instructions, a prompt skeleton and nine tear events. **I
 
 ## Quick start
 
+For the photo-only workflow, download [photo-studio.zip](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/photo-studio.zip), extract it, and open **photo-studio** in Cursor or TRAE. Start a local Agent chat and send a photograph. The bundled project rule supplies the request; no per-photo prompt or slash command is intended. See [platform setup and verification status](INSTALL.md).
+
+Portable ZIP packages support skill import, including a root-level SKILL.md for TraeWork. WorkBuddy can bind the enabled skill to a dedicated expert. Ordinary Doubao chat has no verified GitHub skill-installation route in this project; its dedicated image-capable agent must be configured and tested first. Packaging alone does not establish end-to-end compatibility.
+
+### Manual fallback
+
 Upload your own photo in a reference-image editing tool and try:
 
 ```text
@@ -32,7 +38,9 @@ For the full agent workflow, download and extract the `torn-paper` skill folder.
 
 In a Codex session with the built-in image-generation tool, we explicitly loaded this skill and tested two photos: a magnolia courtyard and a canal with a stone bridge. Eight final images were retained after two targeted corrections. See [testing notes](TESTING.md).
 
-We have not verified fresh-session automatic discovery or an end-to-end run in Doubao or WorkBuddy. Output varies by host and model. Native files are preserved; an enlarged export is not described as native 4K.
+In Cursor local IDE Agent, a fresh studio chat received only a canal photograph, with no text. It loaded the workflow, generated four real images, retried two, and saved four JPEGs. The output was 1152×864 (4:3), rather than the source's approximately 3:2; some tear placement and color details also drifted. This verifies the photo-only execution path, not full visual fidelity or compatibility across accounts.
+
+Fresh-session automatic discovery in Codex and end-to-end runs in TRAE, Doubao or WorkBuddy remain unverified. Output varies by host and model. Native files are preserved; an enlarged export is not described as native 4K.
 
 ## Privacy and security
 

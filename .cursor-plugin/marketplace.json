@@ -1,0 +1,8 @@
+{
+  "name": "jiacheng-challenge-diary",
+  "owner": {"name": "佳成的挑战日记"},
+  "metadata": {"description": "佳成的挑战日记 · 照片转撕纸"},
+  "plugins": [
+    {"name": "jiacheng-torn-paper", "source": ".", "description": "启用后只发照片，自动生成四种撕纸画"}
+  ]
+}

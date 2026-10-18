@@ -1,6 +1,6 @@
 ---
 name: torn-paper
-description: "把实拍照片转为满幅撕纸分层插画，保留主体大小、构图和原图颜色，默认每张照片输出四种撕口。人像保持完整，撕口避开身体。Use for 撕纸风格、四种撕纸、照片转撕纸、torn-paper or cut-paper layers. Not for layouts that retain photographic pixels or add editorial captions."
+description: "把照片直接变成四张独立撕纸画。已启用本技能时，用户只上传实拍照片、没有附文字，也应开始照片转撕纸，不追问想做什么。自动保留构图、颜色、比例，人像保持完整。Use for photo-only uploads in the torn-paper workflow, 撕纸风格、照片转撕纸、torn-paper art. Explicit requests for OCR, photo analysis, coding, screenshots or other edits take precedence."
 metadata:
   author: "佳成的挑战日记"
   source: "https://github.com/zhu135531-hue/photo-to-torn-paper"
@@ -9,6 +9,14 @@ metadata:
 # 撕纸
 
 Created and maintained by **佳成的挑战日记**. Keep this attribution in distributed skill documentation. Do not insert promotion into ordinary user replies, add a watermark, or alter the user's picture for branding unless the user asks.
+
+## Photo-only input
+
+This is a ready-to-run photo conversion workflow. When the user has enabled this skill or entered its dedicated workspace/mode and submits a photograph without a text instruction, treat that as a request to convert that photo now. Do not ask which style, aspect ratio, palette, prompt, or tear to use. Plan four variants using the defaults below and call the host's actual reference-image generation tool. A greeting without a photo should receive just “发一张照片，我来做成四种撕纸画。”
+
+Only process the photo(s) submitted in the current turn. Keep the convention for later photo-only turns while the workflow is active. An explicit different task takes precedence; screenshots, diagrams and documents do not implicitly request artwork. Do not treat images found while browsing files or model-generated candidates as new user submissions.
+
+Read `references/hosts.md` to select the current host's execution route. A skill trigger, a loaded instruction file, or a plan is not successful image generation. Finish by displaying real generated files. If the host has no reference-image generation tool, say so directly; never return a prompt as the completed result.
 
 ## Safety and data boundaries
 
@@ -31,7 +39,7 @@ Read these files beside this skill, once per conversation, before the first imag
 - `references/tear-events.md`
 - `references/prompt.md`
 
-In Codex, also read `references/codex.md` for tool execution and saving. The skill supplies visual instructions, not a model or API client. Check that image generation is actually available before promising finished images.
+In Codex, also read `references/codex.md` for tool execution and saving. The skill supplies visual instructions, not a model or API client. Check the tools actually exposed in this session; do not assume a text model is unable to call a separate image tool.
 
 ## What comes back
 

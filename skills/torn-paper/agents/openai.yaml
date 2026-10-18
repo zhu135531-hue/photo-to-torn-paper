@@ -1,0 +1,6 @@
+interface:
+  display_name: "撕纸 · 佳成的挑战日记"
+  short_description: "只发一张照片，自动保留构图、原色与比例，生成四种独立撕纸画"
+  default_prompt: "使用 $torn-paper，把我发来的照片直接做成四种独立撕纸画。"
+policy:
+  allow_implicit_invocation: true

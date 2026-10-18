@@ -2,7 +2,7 @@
 
 **一张照片，四种撕纸。把喜欢的创作方法，分享给每一个想试试的人。**
 
-[English](README.en.md) · [免安装提示词](TRY_IT.md) · [下载技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper.zip) · [安全说明](SECURITY.md) · [参与共创](CONTRIBUTING.md)
+[English](README.en.md) · [安装一次，只发照片](INSTALL.md) · [下载技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper.zip) · [安全说明](SECURITY.md) · [参与共创](CONTRIBUTING.md)
 
 ![佳成的挑战日记：把照片变成撕纸画](assets/cover.png)
 
@@ -16,7 +16,7 @@
 
 这是从作者在 Cursor 中整理的工作流提取的独立 Agent Skill，包含技能说明、视觉规则、九种撕口和提示词骨架。**需要配合能接收参考照片、生成图片的 AI 工具使用。技能本身不包含图像模型、模型权重或自动调用 API 的程序。**
 
-只想马上试效果：打开[免安装提示词](TRY_IT.md)，上传自己的照片，复制提示词即可尝试。不需要先学 GitHub。想让代理按完整规则工作，再下载技能包。
+新版提供专用工作室与便携技能包：安装或打开一次后，照片本身就是转换请求。工具接收照片、补齐提示词、选择撕口并生成图片；无需每次说“使用技能”。先看[各平台最短入口](INSTALL.md)和[验证状态](TESTING.md)。
 
 图片生成会把所选照片和提示词发送到你使用的图像服务。技能里的可选复制脚本只在本地工作，无联网、密钥收集或遥测；这不表示生图过程完全离线。具体安全边界与此次修复见 [SECURITY.md](SECURITY.md) 和 [安全复查记录](docs/SECURITY_REVIEW.md)。
 
@@ -28,7 +28,18 @@
 - [Codex 运行说明](skills/torn-paper/references/codex.md)
 - [2026-10-18 实测记录与已修问题](TESTING.md)
 
-## 不会编程也能试
+## 只发照片的入口
+
+1. 下载 [photo-studio.zip](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/photo-studio.zip)，解压后用 Cursor 或 TRAE 打开其中的 **photo-studio** 文件夹。
+2. 新建本地 Agent 对话，上传照片并发送。项目内已经包含照片触发规则，不需要复制提示词。
+3. 默认得到四张独立撕纸画；想改变数量时才补充“只做一张”。
+
+TRAE / TraeWork 也提供根目录单文件[技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-trae.zip)。WorkBuddy 使用[便携技能包](https://github.com/zhu135531-hue/photo-to-torn-paper/releases/latest/download/torn-paper-portable.zip)和专用专家配置。豆包需配置专用会话或智能体；目前不能承诺在普通聊天中粘贴 GitHub 地址就能安装。
+
+**Cursor 本地 Agent 已完成“新会话只发照片 → 自动生图并检查 → 保存四张图片”的实测。** 本次结果的比例和部分撕口仍有偏差；其他平台尚待客户端验收，不能据此保证全部兼容。详情见 [TESTING.md](TESTING.md)，具体点击路径见 [INSTALL.md](INSTALL.md)。需要备用手动提示词时，再看 [TRY_IT.md](TRY_IT.md)。
+
+<details>
+<summary>手动复制技能文件夹（已有项目）</summary>
 
 1. 点击本页上方绿色 **Code → Download ZIP**，解压。
 2. 打开一个 Cursor 项目，将下载文件夹里的 `skills/torn-paper` 整个文件夹复制到该项目的 `.cursor/skills/` 下。
@@ -53,6 +64,8 @@
 ```
 
 如果你的工具没有技能安装功能，也可以阅读[提示词骨架](skills/torn-paper/references/prompt.md)，按照片内容填写方括号，并把照片一起交给支持参考图的图像模型。每次先做一种撕口。
+
+</details>
 
 ### 在 Codex 中使用
 
